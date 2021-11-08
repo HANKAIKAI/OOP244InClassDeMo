@@ -17,7 +17,7 @@ namespace sdds {
       DynMarks& add(double mark);
       void set(const char* title);
 
-      //No return type are constructor
+
       DynMarks();
       DynMarks(const char* title);
       DynMarks(const char* title, const double values[], int NoOfValues);
@@ -25,7 +25,7 @@ namespace sdds {
       // This function should only be called 
       // at the end of the lifetime of the object 
       // when it is about to go out of scope.
-      ~DynMarks();      // same as deallocateMem()done 
+      ~DynMarks();
    };
 
 }

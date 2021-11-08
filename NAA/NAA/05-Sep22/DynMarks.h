@@ -8,24 +8,23 @@ namespace sdds {
       char* m_title;
       double* m_values;
       int m_NoOfValues;
-      void setEmpty();
    public:
       // Getters or Accessors or Queries
       void display()const;
       bool inSafeEmpty()const;
       // Setters, Modifiers, Mutators
-      DynMarks& add(double mark);
+      bool add(double mark);
       void set(const char* title);
 
-      //No return type are constructor
-      DynMarks();
-      DynMarks(const char* title);
-      DynMarks(const char* title, const double values[], int NoOfValues);
+      // these two functions can only be called only 
+      // once  and right after the objects are created
+      void init();
+      void init(const char* title, const double values[], int NoOfValues);
       
       // This function should only be called 
       // at the end of the lifetime of the object 
       // when it is about to go out of scope.
-      ~DynMarks();      // same as deallocateMem()done 
+      void deallocateMem();
    };
 
 }

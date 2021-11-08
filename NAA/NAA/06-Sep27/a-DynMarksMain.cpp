@@ -4,13 +4,14 @@ using namespace std;
 using namespace sdds;
 int main() {
    double marks[] = { 12,80,45.5, 88, 99 };
-   DynMarks W1;                      //1 Create an Object
-   W1.init("Workshop 1", marks, 5);  //2 Need to initialize tobeableto use it
+   DynMarks EmptyOne;
+   DynMarks T1("Test one");
+   DynMarks W1("Workshop 1", marks, 5);
    W1.display();
    for (int i = 0; i < 50; i++) {
       W1.add(49.5 + i);
    }
    W1.display();
-   W1.deallocateMem();
+   T1.add(79).display();
    return 0;
 }
