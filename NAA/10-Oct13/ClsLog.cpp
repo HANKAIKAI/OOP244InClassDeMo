@@ -42,7 +42,7 @@ namespace sdds {
       istr >> i;
       istr >> ch;
       if (ch != ',') {
-         istr.setstate(ios::failbit);
+         istr.setstate(ios::failbit);   // put istr in an error state
       }
       else {
          istr.getline(m_data, 1024);

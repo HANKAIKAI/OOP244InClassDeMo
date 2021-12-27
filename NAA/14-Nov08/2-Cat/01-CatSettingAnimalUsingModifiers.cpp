@@ -2,9 +2,9 @@
 using namespace std;
 #include "Cat.h"
 namespace sdds {
-   Cat::Cat(const char* thename, int numOfLives)
-         :Animal(thename),m_numOfLives(numOfLives)  {      //Animal(thename) -> for now it's initialize not set it 
-
+   Cat::Cat(const char* thename, int numOfLives){
+      m_numOfLives = numOfLives;
+      name(thename);
       if(sdds::debug) cout << "Creating " << name() 
          << " the Cat with " << m_numOfLives << " lives"   << endl;
    }
@@ -15,7 +15,7 @@ namespace sdds {
       cout << "Move like " << name() << " the Cat" << endl;
    }*/
    void Cat::sound() {
-      Animal::sound(); // invoking Animal classe's sound() method
+      Animal::sound();
       cout << "Meow!" << endl;
    }
    Cat::~Cat() {

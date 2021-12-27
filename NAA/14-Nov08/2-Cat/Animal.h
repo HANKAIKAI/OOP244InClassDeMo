@@ -5,8 +5,8 @@ namespace sdds {
       char m_name[41];
    public:
       Animal(const char* name = "Nameless");
-      const char* name()const;      // query or getter
-      void name(const char* value); // modifier or setter
+      const char* name()const;
+      void name(const char* value);
       void act();
       void move();
       void sound();

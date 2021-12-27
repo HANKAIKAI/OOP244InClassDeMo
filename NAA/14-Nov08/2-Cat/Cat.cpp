@@ -3,12 +3,12 @@ using namespace std;
 #include "Cat.h"
 namespace sdds {
    Cat::Cat(const char* thename, int numOfLives)
-         :Animal(thename),m_numOfLives(numOfLives)  {      //Animal(thename) -> for now it's initialize not set it 
-
+         :Animal(thename),m_numOfLives(numOfLives)  {
+      
       if(sdds::debug) cout << "Creating " << name() 
          << " the Cat with " << m_numOfLives << " lives"   << endl;
    }
-   void Cat::act() {
+   void Cat::act() { // overiding the act of Base, Animal::act();
       cout << "Act playful, " << name() << " the Cat" << endl;
    }
  /*  void Cat::move() {
